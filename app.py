@@ -158,8 +158,8 @@ def suggestion_text(e, by_id: dict) -> str:
 
 def how_it_works(cfg: MatchConfig, result=None) -> None:
     """The pipeline, explained from the settings and results actually used."""
-    st.write(f"This tool is open source. Every step below runs the code in "
-             f"[the GitHub repository]({REPO}), with the settings shown here"
+    st.write(f"This tool is open source under the [MIT license]({REPO}/blob/main/LICENSE). "
+             f"Every step below runs the code in [the GitHub repository]({REPO}), with the settings shown here"
              + (" for this run." if result else ". Numbers appear after you reconcile."))
     st.html(diagram_html(result, cfg))
 

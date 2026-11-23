@@ -101,3 +101,13 @@ data/         sample dataset (seed 42) used by "Try it with sample data"
 mappings/     column mappings for the generator's bank and ledger formats
 tests/        unit tests per layer, review/report tests, end-to-end app test
 ```
+
+## Contributing
+
+Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md)
+for setup, the engine's ground rules and how to add a matching layer. Please
+never attach real bank or accounting data to an issue.
+
+## License
+
+[MIT](LICENSE). Free to use, change and share, including commercially.
