@@ -165,3 +165,40 @@ def test_app_runs_end_to_end_on_sample_data():
     metrics = {m.label: m.value for m in at.metric}
     assert metrics["Difference"] == "$0.00"
     assert metrics["Resolved by you"] == "1"
+
+
+# --- How it works view ------------------------------------------------------------------
+
+def test_funnel_adds_up_and_matches_summary():
+    from recon.explain import funnel
+    r, _, _ = sample_result()
+    rows = funnel(r)
+    assert rows[0]["in"] == len(r.transactions)
+    for a, b in zip(rows, rows[1:]):
+        assert b["in"] == a["left"]
+    matched_lines = sum(row["matched"] for row in rows)
+    s = r.summary
+    assert matched_lines == s["matched"]["bank"] + s["matched"]["ledger"]
+    assert rows[-1]["left"] == len(r.exceptions)
+
+
+def test_stage_text_follows_settings():
+    from recon.explain import diagram_html, stages
+    from recon.models import MatchConfig
+    cfg = MatchConfig(exact_window_days=3, auto_accept=85)
+    text = {s.key: s.rule for s in stages(cfg)}
+    assert "0 to 3 days" in text["exact"] and "85+" in text["fuzzy"]
+    assert "Needs attention" in diagram_html(None, cfg)
+    r, _, _ = sample_result()
+    assert "222 matched" in diagram_html(r, r.config)
+
+
+def test_how_it_works_tab_renders():
+    st_testing = pytest.importorskip("streamlit.testing.v1")
+    at = st_testing.AppTest.from_file(str(ROOT / "app.py"), default_timeout=60).run()
+    assert any(e.label.startswith("How the matching works") for e in at.expander)
+    next(b for b in at.sidebar.button if b.label.startswith("Try it")).click().run()
+    next(b for b in at.button if b.label == "Reconcile").click().run()
+    assert not at.exception
+    assert [t.label for t in at.tabs][-1] == "How it works"
+    assert any(e.label.startswith("4. Close match") for e in at.expander)

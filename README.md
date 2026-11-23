@@ -16,7 +16,7 @@ streamlit run app.py
 
 Click **Try it with sample data** to see it work without your own files.
 
-The app has four screens:
+The app has these screens:
 
 | Screen | What you do there |
 |---|---|
@@ -24,6 +24,7 @@ The app has four screens:
 | Summary | Match rate, how matches were made, items by reason, value still open |
 | Needs attention | Accept suggested matches, or mark items resolved with a reason and note |
 | Report and download | Bank vs book balance with reconciling items, journal entries, downloads (HTML report, CSVs, zip) |
+| How it works | The pipeline step by step: a live funnel of what each step matched, each rule in plain language with the settings used, and links to the code |
 
 ## Deploy to Streamlit Community Cloud (free)
 
@@ -93,7 +94,8 @@ Then put `"my_layer"` in `MatchConfig.layers` where it should run.
 ```
 app.py        Streamlit app
 recon/        engine: models, normalize, text, layers, engine, evaluate, CLI,
-              plus autodetect (column guessing), review (decisions), report
+              plus autodetect (column guessing), review (decisions), report,
+              explain (the plain-language pipeline shown in 'How it works')
 synth/        synthetic data generator and an independent dataset checker
 data/         sample dataset (seed 42) used by "Try it with sample data"
 mappings/     column mappings for the generator's bank and ledger formats

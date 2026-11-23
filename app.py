@@ -20,6 +20,7 @@ from recon.autodetect import DATE_FORMATS, decode, guess_date_format, guess_mapp
 from recon.normalize import normalize, parse_amount
 from recon.report import (BUCKET_LABELS, LAYER_LABELS, build_reconciliation, exceptions_csv,
                           journal_csv, journal_rows, matches_csv, money, render_html)
+from recon.explain import REPO, diagram_html, funnel, stages
 from recon.review import accept_suggestion, reopen, resolve
 
 HERE = Path(__file__).resolve().parent
@@ -155,6 +156,37 @@ def suggestion_text(e, by_id: dict) -> str:
     return f"{describe(others, by_id)}  [{s.confidence:.0f}]{tag}"
 
 
+def how_it_works(cfg: MatchConfig, result=None) -> None:
+    """The pipeline, explained from the settings and results actually used."""
+    st.write(f"This tool is open source. Every step below runs the code in "
+             f"[the GitHub repository]({REPO}), with the settings shown here"
+             + (" for this run." if result else ". Numbers appear after you reconcile."))
+    st.html(diagram_html(result, cfg))
+
+    if result:
+        st.subheader("What happened in this run")
+        names = {**LAYER_LABELS, "manual": "Confirmed by you"}
+        rows = [{"Step": names.get(r["stage"], r["stage"]), "Lines coming in": r["in"],
+                 "Matched here": r["matched"], "Left for the next step": r["left"]}
+                for r in funnel(result)]
+        st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch")
+        st.caption("Counts are lines from both files. A match of one bank line to one book line counts as 2.")
+
+    st.subheader("Each step, in plain language")
+    for stg in stages(result.config if result else cfg):
+        with st.expander(stg.title):
+            st.markdown(f"**What it does.** {stg.does}")
+            st.markdown(f"**The rule.** {stg.rule}")
+            st.markdown(f"**What it never does.** {stg.never}")
+            st.markdown(f"[Read the code]({stg.source})")
+
+    with st.expander("All settings" + (" used in this run" if result else "")):
+        used = (result.config if result else cfg).to_dict()
+        st.dataframe(pd.DataFrame([{"Setting": k, "Value": str(v)} for k, v in used.items()]),
+                     hide_index=True, width="stretch")
+        st.caption("Change the main ones under Matching settings in the sidebar.")
+
+
 # ---------------------------------------------------------------------------
 # Sidebar
 # ---------------------------------------------------------------------------
@@ -233,6 +265,9 @@ if ss.result is None:
             st.rerun()
     else:
         st.info("Upload both files, or use **Try it with sample data** in the sidebar.")
+    st.divider()
+    with st.expander("How the matching works (open source)"):
+        how_it_works(cfg)
     st.stop()
 
 # ---------------------------------------------------------------------------
@@ -252,8 +287,9 @@ if btn.button("Change files or settings"):
     ss.result = None
     st.rerun()
 
-tab_sum, tab_exc, tab_match, tab_rep = st.tabs(
-    ["Summary", f"Needs attention ({len(open_exc)})", f"Matched ({len(r.matches)})", "Report and download"])
+tab_sum, tab_exc, tab_match, tab_rep, tab_how = st.tabs(
+    ["Summary", f"Needs attention ({len(open_exc)})", f"Matched ({len(r.matches)})", "Report and download",
+     "How it works"])
 
 # --- Summary ------------------------------------------------------------------
 with tab_sum:
@@ -493,3 +529,7 @@ with tab_rep:
         d4.download_button("Matches (.csv)", files[f"matches_{stamp}.csv"], f"matches_{stamp}.csv",
                            "text/csv", width="stretch")
         st.caption("The HTML report opens in any browser and prints cleanly to PDF.")
+
+# --- How it works ----------------------------------------------------------------
+with tab_how:
+    how_it_works(cfg, r)
