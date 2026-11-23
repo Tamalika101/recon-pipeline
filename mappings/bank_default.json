@@ -1,0 +1,8 @@
+{
+  "source": "bank",
+  "name": "Generic bank export (debit/credit columns)",
+  "date": {"column": "Posting Date", "format": "%m/%d/%Y"},
+  "amount": {"debit": "Debit", "credit": "Credit"},
+  "description": "Description",
+  "reference": "Bank Ref"
+}

@@ -1,0 +1,66 @@
+{
+  "seed": 42,
+  "period": {
+    "start": "2026-11-01",
+    "end": "2026-11-30"
+  },
+  "events_requested": 300,
+  "rows": {
+    "bank": 282,
+    "ledger": 298,
+    "truth": 292
+  },
+  "balances": {
+    "opening": "26616.98",
+    "bank_closing": "92826.94",
+    "ledger_closing": "82598.03",
+    "difference": "10228.91",
+    "explained_by": {
+      "bank_only_items": "-380.48",
+      "ledger_only_items_reversed": "10608.94",
+      "transposition_errors": "0.45"
+    }
+  },
+  "id_coverage": {
+    "bank_ref_present": 0.546,
+    "ledger_ref_present": 0.738,
+    "shared_ref_lines": 111
+  },
+  "date_window_days": {
+    "exact": 5,
+    "fuzzy": 10
+  },
+  "scenario_counts": {
+    "ambiguous_twins": 6,
+    "bank_fee_missing": 4,
+    "clean_no_id": 131,
+    "duplicate_entry": 4,
+    "garbled": 17,
+    "lump_deposit": 6,
+    "outstanding_check": 6,
+    "shared_id": 111,
+    "transposed": 5,
+    "unknown_charge": 2
+  },
+  "expected_layer_counts": {
+    "combination": 6,
+    "exact": 131,
+    "fuzzy": 17,
+    "manual": 6,
+    "none": 21,
+    "reference_id": 111
+  },
+  "rates": {
+    "shared_id": 0.4,
+    "garbled": 0.08,
+    "transposed": 0.02,
+    "twins": 0.02,
+    "lump_deposit": 0.02,
+    "duplicate": 0.015,
+    "outstanding": 0.02,
+    "bank_fee": 0.015,
+    "unknown_charge": 0.007,
+    "missing_ledger_ref": 0.15,
+    "bank_trace_ref": 0.3
+  }
+}

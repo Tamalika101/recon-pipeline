@@ -1,0 +1,9 @@
+{
+  "source": "ledger",
+  "name": "Accounting software cash-account export (signed amount)",
+  "date": {"column": "Date", "format": "%Y-%m-%d"},
+  "amount": {"column": "Amount", "sign": 1},
+  "description": "Memo",
+  "reference": "Reference",
+  "external_id": "Entry ID"
+}

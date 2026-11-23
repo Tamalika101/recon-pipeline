@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+results/
+*.zip
+.venv/
+cdk.out/
+node_modules/
+.env

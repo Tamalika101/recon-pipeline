@@ -1,0 +1,299 @@
+Date,Entry ID,Account,Memo,Amount,Reference
+2026-11-01,JE-10001,Accounts Payable,Bill payment - Office Depot BILL-555,-2412.08,
+2026-11-01,JE-10002,Rent Expense,Rent - Bayview Properties Nov 2026,-4480.85,ACH-53LC58
+2026-11-01,JE-10003,Software Subscriptions,Mailchimp subscription,-369.51,
+2026-11-01,JE-10004,Merchant Settlements,Square settlement,390.31,
+2026-11-01,JE-10005,Accounts Payable,Bill payment - Staples BILL-595,-2764.93,
+2026-11-01,JE-10006,Accounts Receivable,Payment received - Delta Logistics INV-1115,698.55,INV-1115
+2026-11-01,JE-10007,Accounts Payable,Bill payment - Comcast Business BILL-612,-2550.51,ACH-8LW2LM
+2026-11-01,JE-10008,Merchant Settlements,Square settlement,964.47,STL-NK20IN
+2026-11-01,JE-10009,Accounts Receivable,Payment received - Delta Logistics INV-1137,3669.35,INV-1137
+2026-11-01,JE-10010,Accounts Receivable,Payment received - Brightline Studio INV-1141,560.23,WIRE-PKXVHA
+2026-11-02,JE-10011,Accounts Payable,Bill payment - Office Depot BILL-556,-2412.08,
+2026-11-02,JE-10012,Software Subscriptions,QuickBooks Online subscription,-70.20,POS-IR4COW
+2026-11-02,JE-10013,Accounts Receivable,Payment received - Evergreen Dental INV-1071,3887.48,INV-1071
+2026-11-02,JE-10014,Accounts Payable,Bill payment - Comcast Business BILL-596,-1277.97,BILL-596
+2026-11-02,JE-10015,Accounts Receivable,Payment received - Brightline Studio INV-1133,1678.16,INV-1133
+2026-11-02,JE-10016,Accounts Payable,Bill payment - Office Depot BILL-623,-896.44,BILL-623
+2026-11-02,JE-10017,Merchant Settlements,Square settlement,1019.13,STL-GU3OBY
+2026-11-02,JE-10018,Accounts Receivable,Payment received - Delta Logistics INV-1136,1281.21,INV-1136
+2026-11-03,JE-10019,Accounts Receivable,Payment received - Evergreen Dental INV-1062,2949.79,INV-1062
+2026-11-03,JE-10020,Merchant Settlements,Square settlement,1189.80,
+2026-11-03,JE-10021,Software Subscriptions,Slack subscription,-317.34,
+2026-11-03,JE-10022,Accounts Payable,Bill payment - Comcast Business BILL-580,-2772.81,BILL-580
+2026-11-03,JE-10023,Merchant Settlements,Square settlement,1794.21,STL-QW2VMC
+2026-11-03,JE-10024,Accounts Payable,Bill payment - Office Depot BILL-584,-448.26,ACH-X9DVNU
+2026-11-03,JE-10025,Accounts Payable,Bill payment - Sysco BILL-590,-4350.32,ACH-P9GKDL
+2026-11-03,JE-10026,Merchant Settlements,Square settlement,1335.00,STL-389YZT
+2026-11-03,JE-10027,Software Subscriptions,Google Workspace subscription,-52.08,
+2026-11-03,JE-10028,Merchant Settlements,Square settlement,1688.87,STL-KUU4YT
+2026-11-03,JE-10029,Accounts Payable,Bill payment - Sysco BILL-611,-4334.10,ACH-JN2FOM
+2026-11-03,JE-10030,Accounts Payable,Bill payment - Sysco BILL-620,-639.37,BILL-620
+2026-11-03,JE-10031,Accounts Receivable,Payment received - Ironwood Fitness INV-1131,3118.86,ACH-SH3TOW
+2026-11-04,JE-10032,Accounts Receivable,Payment received - Evergreen Dental INV-1059,2391.86,INV-1059
+2026-11-04,JE-10033,Accounts Payable,Bill payment - Grainger BILL-566,-216.33,BILL-566
+2026-11-04,JE-10034,Software Subscriptions,QuickBooks Online subscription,-76.89,POS-1U3493
+2026-11-04,JE-10035,Accounts Receivable,Payment received - Ironwood Fitness INV-1104,2950.20,ACH-YZR6QC
+2026-11-04,JE-10036,Accounts Payable,Bill payment - FedEx BILL-622,-4601.23,BILL-622
+2026-11-04,JE-10037,Merchant Settlements,Square settlement,1607.39,
+2026-11-05,JE-10038,Accounts Receivable,Payment received - Foxglove Bakery INV-1043,2515.71,INV-1043
+2026-11-05,JE-10039,Software Subscriptions,Adobe subscription,-228.31,
+2026-11-05,JE-10040,Merchant Settlements,Square settlement,248.95,
+2026-11-05,JE-10041,Accounts Payable,Bill payment - Uline BILL-589,-4194.88,
+2026-11-06,JE-10042,Accounts Receivable,Payment received - Brightline Studio INV-1044,2083.89,INV-1044
+2026-11-06,JE-10043,Accounts Receivable,Payment received - Acme Corp INV-1045,1756.84,INV-1045
+2026-11-06,JE-10044,Accounts Receivable,Payment received - Delta Logistics INV-1060,1171.49,INV-1060
+2026-11-06,JE-10045,Accounts Payable,Bill payment - FedEx BILL-563,-4504.57,BILL-563
+2026-11-06,JE-10046,Merchant Settlements,Square settlement,1355.17,
+2026-11-06,JE-10047,Merchant Settlements,Square settlement,1789.75,STL-ITFOYQ
+2026-11-06,JE-10048,Accounts Payable,Bill payment - Sysco BILL-587,-4229.61,ACH-32EJX5
+2026-11-06,JE-10049,Accounts Payable,Bill payment - Pacific Gas & Electric BILL-606,-3576.40,BILL-606
+2026-11-06,JE-10050,Merchant Settlements,Square settlement,1573.52,
+2026-11-06,JE-10051,Accounts Receivable,Payment received - Evergreen Dental INV-1116,2631.69,WIRE-PUSDDT
+2026-11-06,JE-10052,Accounts Receivable,Payment received - Granite Peak Co INV-1123,2492.77,INV-1123
+2026-11-06,JE-10053,Merchant Settlements,Square settlement,1168.22,STL-IL0MVZ
+2026-11-06,JE-10054,Merchant Settlements,Square settlement,1665.33,
+2026-11-06,JE-10055,Merchant Settlements,Square settlement,1789.75,STL-ITFOYQ
+2026-11-07,JE-10056,Accounts Payable,Bill payment - Grainger BILL-558,-4347.41,BILL-558
+2026-11-07,JE-10057,Accounts Receivable,Payment received - Harbor Health INV-1061,1795.52,WIRE-8UT0CV
+2026-11-07,JE-10058,Software Subscriptions,Adobe subscription,-238.35,POS-4WIRE8
+2026-11-07,JE-10059,Accounts Payable,Bill payment - Staples BILL-567,-4611.44,ACH-MJKV5U
+2026-11-07,JE-10060,Accounts Payable,Bill payment - Pacific Gas & Electric BILL-582,-1388.72,ACH-GF1C8W
+2026-11-07,JE-10061,Accounts Receivable,Payment received - Foxglove Bakery INV-1095,1482.11,INV-1095
+2026-11-07,JE-10062,Accounts Payable,Bill payment - Grainger BILL-597,-3074.64,BILL-597
+2026-11-07,JE-10063,Merchant Settlements,Square settlement,1380.74,
+2026-11-07,JE-10064,Accounts Payable,Bill payment - Comcast Business BILL-608,-506.34,BILL-608
+2026-11-07,JE-10065,Accounts Receivable,Payment received - Acme Corp INV-1130,3751.94,INV-1130
+2026-11-07,JE-10066,Merchant Settlements,Square settlement,1030.14,
+2026-11-07,JE-10067,Software Subscriptions,Canva subscription,-29.31,POS-9OT7TX
+2026-11-07,JE-10068,Accounts Receivable,Payment received - Harbor Health INV-1061,1795.52,WIRE-8UT0CV
+2026-11-08,JE-10069,Accounts Payable,Bill payment - Sysco BILL-551,-331.12,
+2026-11-08,JE-10070,Accounts Receivable,Payment received - Acme Corp INV-1056,1049.05,INV-1056
+2026-11-08,JE-10071,Accounts Receivable,Payment received - Granite Peak Co INV-1057,1688.73,INV-1057
+2026-11-08,JE-10072,Merchant Settlements,Square settlement,685.45,
+2026-11-08,JE-10073,Merchant Settlements,Square settlement,1215.29,
+2026-11-08,JE-10074,Accounts Receivable,Payment received - Juniper Events INV-1085,2712.23,WIRE-POC50H
+2026-11-08,JE-10075,Accounts Payable,Bill payment - Comcast Business BILL-586,-2478.88,BILL-586
+2026-11-08,JE-10076,Accounts Receivable,Payment received - Harbor Health INV-1088,2132.83,WIRE-NCILDZ
+2026-11-08,JE-10077,Accounts Receivable,Payment received - Cedar & Pine LLC INV-1089,3177.31,WIRE-KBP2QD
+2026-11-08,JE-10078,Accounts Receivable,Payment received - Evergreen Dental INV-1093,1125.78,
+2026-11-08,JE-10079,Accounts Payable,Bill payment - Grainger BILL-594,-2849.97,BILL-594
+2026-11-08,JE-10080,Accounts Receivable,Payment received - Ironwood Fitness INV-1102,1721.51,WIRE-B6IIDL
+2026-11-08,JE-10081,Accounts Payable,Bill payment - Sysco BILL-607,-2123.73,ACH-4KZ36U
+2026-11-08,JE-10082,Merchant Settlements,Square settlement,1610.89,
+2026-11-08,JE-10083,Accounts Payable,Bill payment - Sysco BILL-621,-4204.47,ACH-0A4ABN
+2026-11-08,JE-10084,Accounts Receivable,Payment received - Foxglove Bakery INV-1134,2360.20,WIRE-CH2VFF
+2026-11-08,JE-10085,Accounts Payable,Bill payment - Office Depot BILL-629,-1104.63,BILL-629
+2026-11-08,JE-10086,Accounts Receivable,Payment received - Harbor Health INV-1088,2132.83,WIRE-NCILDZ
+2026-11-09,JE-10087,Accounts Payable,Bill payment - Sysco BILL-552,-331.12,
+2026-11-09,JE-10088,Accounts Receivable,Payment received - Juniper Events INV-1054,2374.25,INV-1054
+2026-11-09,JE-10089,Accounts Receivable,Payment received - Delta Logistics INV-1055,2705.70,INV-1055
+2026-11-09,JE-10090,Accounts Receivable,Payment received - Granite Peak Co INV-1058,1032.06,INV-1058
+2026-11-09,JE-10091,Accounts Payable,Bill payment - Sysco BILL-561,-3628.06,ACH-EDTJVZ
+2026-11-09,JE-10092,Accounts Payable,Bill payment - FedEx BILL-564,-1608.86,BILL-564
+2026-11-09,JE-10093,Accounts Receivable,Payment received - Ironwood Fitness INV-1072,2834.91,INV-1072
+2026-11-09,JE-10094,Merchant Settlements,Square settlement,1592.81,STL-LIZL08
+2026-11-09,JE-10095,Software Subscriptions,Slack subscription,-330.70,POS-7R3OCW
+2026-11-09,JE-10096,Accounts Receivable,Payment received - Evergreen Dental INV-1075,1782.25,WIRE-2WX7PT
+2026-11-09,JE-10097,Software Subscriptions,Dropbox subscription,-336.98,
+2026-11-09,JE-10098,Merchant Settlements,Square settlement,1040.96,
+2026-11-09,JE-10099,Accounts Payable,Bill payment - Grainger BILL-576,-623.44,BILL-576
+2026-11-09,JE-10100,Merchant Settlements,Square settlement,529.29,
+2026-11-09,JE-10101,Accounts Receivable,Payment received - Delta Logistics INV-1091,1800.04,
+2026-11-09,JE-10102,Accounts Payable,Bill payment - Sysco BILL-603,-1878.18,ACH-XYCELO
+2026-11-09,JE-10103,Software Subscriptions,Slack subscription,-79.13,POS-2C8QIZ
+2026-11-09,JE-10104,Accounts Payable,Bill payment - Comcast Business BILL-627,-986.89,ACH-T2018U
+2026-11-10,JE-10105,Accounts Receivable,Payment received - Foxglove Bakery INV-1064,3354.02,INV-1064
+2026-11-10,JE-10106,Accounts Receivable,Payment received - Ironwood Fitness INV-1080,1461.55,INV-1080
+2026-11-10,JE-10107,Accounts Receivable,Payment received - Foxglove Bakery INV-1086,1926.50,WIRE-UXLEZ8
+2026-11-10,JE-10108,Accounts Payable,Bill payment - Grainger BILL-599,-3088.56,
+2026-11-10,JE-10109,Accounts Payable,Bill payment - FedEx BILL-600,-4440.65,ACH-B8C7X0
+2026-11-10,JE-10110,Accounts Payable,Bill payment - Comcast Business BILL-602,-4113.15,BILL-602
+2026-11-10,JE-10111,Software Subscriptions,Canva subscription,-328.72,
+2026-11-10,JE-10112,Merchant Settlements,Square settlement,604.12,
+2026-11-10,JE-10113,Accounts Payable,Bill payment - FedEx BILL-618,-686.95,BILL-618
+2026-11-11,JE-10114,Merchant Settlements,Square settlement,480.94,
+2026-11-11,JE-10115,Software Subscriptions,Zoom subscription,-290.85,
+2026-11-11,JE-10116,Merchant Settlements,Square settlement,257.53,
+2026-11-11,JE-10117,Merchant Settlements,Square settlement,1302.74,
+2026-11-11,JE-10118,Accounts Payable,Bill payment - Sysco BILL-598,-2639.80,BILL-598
+2026-11-11,JE-10119,Merchant Settlements,Square settlement,1376.88,STL-FQJG02
+2026-11-11,JE-10120,Software Subscriptions,Zoom subscription,-104.63,POS-IUIT7M
+2026-11-11,JE-10121,Software Subscriptions,QuickBooks Online subscription,-50.05,
+2026-11-11,JE-10122,Accounts Receivable,Payment received - Brightline Studio INV-1129,3391.06,WIRE-2IXIVZ
+2026-11-11,JE-10123,Accounts Payable,Bill payment - Staples BILL-626,-1953.72,BILL-626
+2026-11-11,JE-10124,Accounts Receivable,Payment received - Delta Logistics INV-1138,3454.44,INV-1138
+2026-11-12,JE-10125,Merchant Settlements,Square settlement,649.14,STL-PQ0Y9D
+2026-11-12,JE-10126,Software Subscriptions,Google Workspace subscription,-57.01,POS-KPTK93
+2026-11-12,JE-10127,Accounts Receivable,Payment received - Acme Corp INV-1065,2767.77,INV-1065
+2026-11-12,JE-10128,Accounts Receivable,Payment received - Evergreen Dental INV-1067,1236.20,WIRE-0LVSNU
+2026-11-12,JE-10129,Accounts Receivable,Payment received - Evergreen Dental INV-1076,451.76,INV-1076
+2026-11-12,JE-10130,Accounts Payable,Bill payment - FedEx BILL-578,-2351.13,BILL-578
+2026-11-12,JE-10131,Merchant Settlements,Square settlement,1379.49,
+2026-11-12,JE-10132,Accounts Receivable,Payment received - Harbor Health INV-1092,3459.47,WIRE-Q06WPX
+2026-11-12,JE-10133,Merchant Settlements,Square settlement,300.36,STL-S0FB4Y
+2026-11-12,JE-10134,Accounts Payable,Bill payment - Pacific Gas & Electric BILL-591,-502.49,ACH-NUVY8N
+2026-11-12,JE-10135,Accounts Payable,Bill payment - Sysco BILL-604,-3769.10,ACH-WHEF0V
+2026-11-12,JE-10136,Software Subscriptions,Zoom subscription,-191.41,
+2026-11-12,JE-10137,Merchant Settlements,Square settlement,394.04,
+2026-11-12,JE-10138,Merchant Settlements,Square settlement,1009.29,STL-OBK3G8
+2026-11-12,JE-10139,Accounts Receivable,Payment received - Acme Corp INV-1135,623.32,ACH-Y7DV7C
+2026-11-13,JE-10140,Accounts Receivable,Payment received - Foxglove Bakery INV-1049,829.53,INV-1049
+2026-11-13,JE-10141,Accounts Payable,Bill payment - Staples BILL-571,-2625.79,ACH-GV0EC1
+2026-11-13,JE-10142,Merchant Settlements,Square settlement,977.31,
+2026-11-13,JE-10143,Merchant Settlements,Square settlement,1654.50,STL-LK8AGS
+2026-11-13,JE-10144,Accounts Receivable,Payment received - Acme Corp INV-1108,2640.63,ACH-PT11F9
+2026-11-13,JE-10145,Merchant Settlements,Square settlement,1597.24,STL-QXLM5Q
+2026-11-13,JE-10146,Accounts Receivable,Payment received - Brightline Studio INV-1114,3727.45,ACH-TCAGRP
+2026-11-13,JE-10147,Accounts Receivable,Payment received - Harbor Health INV-1122,3066.74,INV-1122
+2026-11-13,JE-10148,Accounts Receivable,Payment received - Cedar & Pine LLC INV-1125,1987.81,INV-1125
+2026-11-13,JE-10149,Accounts Receivable,Payment received - Brightline Studio INV-1127,841.07,INV-1127
+2026-11-13,JE-10150,Merchant Settlements,Square settlement,1085.39,STL-LYE088
+2026-11-14,JE-10151,Accounts Receivable,Payment received - Harbor Health INV-1048,1520.49,INV-1048
+2026-11-14,JE-10152,Accounts Payable,Bill payment - FedEx BILL-577,-3229.35,BILL-577
+2026-11-14,JE-10153,Accounts Receivable,Payment received - Acme Corp INV-1097,3663.06,INV-1097
+2026-11-14,JE-10154,Accounts Receivable,Payment received - Juniper Events INV-1101,3972.74,ACH-FYO175
+2026-11-14,JE-10155,Accounts Payable,Bill payment - Pacific Gas & Electric BILL-601,-177.16,BILL-601
+2026-11-14,JE-10156,Accounts Receivable,Payment received - Juniper Events INV-1103,1517.50,INV-1103
+2026-11-14,JE-10157,Accounts Payable,Bill payment - Comcast Business BILL-610,-2015.47,BILL-610
+2026-11-14,JE-10158,Accounts Receivable,Payment received - Evergreen Dental INV-1117,1878.79,WIRE-JK2N7Z
+2026-11-15,JE-10159,Accounts Receivable,Payment received - Juniper Events INV-1053,1156.69,INV-1053
+2026-11-15,JE-10160,Payroll Expense,Payroll net pay 2026-11-15,-9204.22,PR-039TEX
+2026-11-15,JE-10161,Accounts Payable,Bill payment - Sysco BILL-559,-2575.50,ACH-34DXTA
+2026-11-15,JE-10162,Accounts Payable,Bill payment - Office Depot BILL-562,-3072.41,ACH-EQTUL1
+2026-11-15,JE-10163,Accounts Receivable,Payment received - Delta Logistics INV-1070,3643.18,
+2026-11-15,JE-10164,Merchant Settlements,Square settlement,741.62,
+2026-11-15,JE-10165,Software Subscriptions,Dropbox subscription,-102.21,
+2026-11-15,JE-10166,Accounts Receivable,Payment received - Cedar & Pine LLC INV-1079,2507.04,INV-1079
+2026-11-15,JE-10167,Accounts Receivable,Payment received - Evergreen Dental INV-1082,3573.22,WIRE-SP2EX5
+2026-11-15,JE-10168,Accounts Payable,Bill payment - Pacific Gas & Electric BILL-585,-355.21,ACH-SVN7N1
+2026-11-15,JE-10169,Accounts Payable,Bill payment - Staples BILL-592,-532.58,BILL-592
+2026-11-15,JE-10170,Accounts Receivable,Payment received - Acme Corp INV-1099,1018.46,
+2026-11-15,JE-10171,Software Subscriptions,Adobe subscription,-99.49,POS-6MM1ZX
+2026-11-15,JE-10172,Merchant Settlements,Square settlement,1430.89,
+2026-11-15,JE-10173,Accounts Receivable,Payment received - Brightline Studio INV-1119,1656.53,INV-1119
+2026-11-15,JE-10174,Accounts Payable,Bill payment - Office Depot BILL-615,-4016.03,BILL-615
+2026-11-15,JE-10175,Merchant Settlements,Square settlement,192.68,STL-Q9P965
+2026-11-15,JE-10176,Accounts Receivable,Payment received - Cedar & Pine LLC INV-1128,658.67,INV-1128
+2026-11-15,JE-10177,Accounts Payable,Bill payment - FedEx BILL-625,-783.00,BILL-625
+2026-11-16,JE-10178,Accounts Receivable,Payment received - Evergreen Dental INV-1050,674.35,INV-1050
+2026-11-16,JE-10179,Accounts Receivable,Payment received - Acme Corp INV-1051,1197.25,INV-1051
+2026-11-16,JE-10180,Accounts Receivable,Payment received - Granite Peak Co INV-1052,1583.51,INV-1052
+2026-11-16,JE-10181,Accounts Payable,Bill payment - Comcast Business BILL-568,-598.85,ACH-TIRZQA
+2026-11-16,JE-10182,Accounts Receivable,Payment received - Granite Peak Co INV-1073,3926.95,INV-1073
+2026-11-16,JE-10183,Accounts Payable,Bill payment - Office Depot BILL-616,-4687.82,ACH-E38SRY
+2026-11-16,JE-10184,Accounts Receivable,Payment received - Cedar & Pine LLC INV-1132,926.22,INV-1132
+2026-11-16,JE-10185,Accounts Receivable,Payment received - Evergreen Dental INV-1142,729.58,ACH-RXDTG5
+2026-11-17,JE-10186,Accounts Receivable,Payment received - Ironwood Fitness INV-1041,1446.29,INV-1041
+2026-11-17,JE-10187,Accounts Receivable,Payment received - Harbor Health INV-1042,1519.81,INV-1042
+2026-11-17,JE-10188,Accounts Receivable,Payment received - Granite Peak Co INV-1084,2846.26,
+2026-11-17,JE-10189,Merchant Settlements,Square settlement,350.22,
+2026-11-17,JE-10190,Merchant Settlements,Square settlement,1529.90,STL-NNGH8R
+2026-11-17,JE-10191,Accounts Receivable,Payment received - Cedar & Pine LLC INV-1087,1112.35,INV-1087
+2026-11-17,JE-10192,Merchant Settlements,Square settlement,327.41,
+2026-11-17,JE-10193,Accounts Payable,Bill payment - Pacific Gas & Electric BILL-609,-4294.48,BILL-609
+2026-11-17,JE-10194,Accounts Receivable,Payment received - Cedar & Pine LLC INV-1120,2126.24,INV-1120
+2026-11-17,JE-10195,Accounts Receivable,Payment received - Foxglove Bakery INV-1121,3697.22,INV-1121
+2026-11-17,JE-10196,Software Subscriptions,Zoom subscription,-219.89,
+2026-11-18,JE-10197,Accounts Receivable,Payment received - Acme Corp INV-1047,713.13,INV-1047
+2026-11-18,JE-10198,Accounts Receivable,Payment received - Foxglove Bakery INV-1063,985.87,WIRE-ZUE8YF
+2026-11-18,JE-10199,Accounts Receivable,Payment received - Cedar & Pine LLC INV-1074,3250.90,INV-1074
+2026-11-18,JE-10200,Software Subscriptions,Dropbox subscription,-30.44,POS-6XCJ88
+2026-11-18,JE-10201,Accounts Receivable,Payment received - Brightline Studio INV-1083,2253.74,INV-1083
+2026-11-18,JE-10202,Accounts Receivable,Payment received - Delta Logistics INV-1107,318.21,INV-1107
+2026-11-18,JE-10203,Merchant Settlements,Square settlement,619.13,
+2026-11-18,JE-10204,Accounts Payable,Bill payment - Pacific Gas & Electric BILL-628,-3102.31,BILL-628
+2026-11-19,JE-10205,Accounts Receivable,Payment received - Juniper Events INV-1046,2284.61,INV-1046
+2026-11-19,JE-10206,Accounts Payable,Bill payment - Pacific Gas & Electric BILL-557,-3942.45,BILL-557
+2026-11-19,JE-10207,Software Subscriptions,Google Workspace subscription,-280.88,
+2026-11-19,JE-10208,Software Subscriptions,Mailchimp subscription,-117.16,
+2026-11-19,JE-10209,Software Subscriptions,Mailchimp subscription,-172.90,POS-MKZA3O
+2026-11-19,JE-10210,Merchant Settlements,Square settlement,1630.00,STL-H5LF6A
+2026-11-19,JE-10211,Accounts Payable,Bill payment - Staples BILL-581,-4979.54,ACH-POXKO8
+2026-11-19,JE-10212,Merchant Settlements,Square settlement,1714.31,
+2026-11-19,JE-10213,Accounts Receivable,Payment received - Evergreen Dental INV-1096,3521.37,INV-1096
+2026-11-19,JE-10214,Accounts Receivable,Payment received - Juniper Events INV-1100,1970.01,INV-1100
+2026-11-19,JE-10215,Software Subscriptions,Adobe subscription,-320.02,POS-RSZ1N3
+2026-11-19,JE-10216,Software Subscriptions,QuickBooks Online subscription,-261.46,
+2026-11-19,JE-10217,Software Subscriptions,Canva subscription,-386.40,POS-9G1A07
+2026-11-19,JE-10218,Accounts Payable,Bill payment - Grainger BILL-624,-2553.64,
+2026-11-19,JE-10219,Software Subscriptions,Slack subscription,-81.69,
+2026-11-20,JE-10220,Software Subscriptions,QuickBooks Online subscription,-272.71,POS-UO4KH2
+2026-11-20,JE-10221,Software Subscriptions,Dropbox subscription,-392.09,
+2026-11-20,JE-10222,Merchant Settlements,Square settlement,1708.16,STL-8HL88K
+2026-11-20,JE-10223,Merchant Settlements,Square settlement,1768.37,STL-VYLIEN
+2026-11-21,JE-10224,Accounts Payable,Bill payment - Comcast Business BILL-569,-2868.11,ACH-PBJEK5
+2026-11-21,JE-10225,Accounts Payable,Bill payment - Staples BILL-573,-230.46,BILL-573
+2026-11-21,JE-10226,Software Subscriptions,Mailchimp subscription,-216.52,
+2026-11-21,JE-10227,Accounts Payable,Bill payment - Comcast Business BILL-574,-3405.25,ACH-DWB2BN
+2026-11-21,JE-10228,Accounts Payable,Bill payment - Staples BILL-583,-3721.10,BILL-583
+2026-11-21,JE-10229,Accounts Receivable,Payment received - Brightline Studio INV-1106,2775.01,INV-1106
+2026-11-21,JE-10230,Accounts Receivable,Payment received - Evergreen Dental INV-1118,3932.45,INV-1118
+2026-11-22,JE-10231,Accounts Payable,Bill payment - Uline BILL-553,-931.58,
+2026-11-22,JE-10232,Software Subscriptions,Zoom subscription,-273.61,
+2026-11-22,JE-10233,Accounts Receivable,Payment received - Granite Peak Co INV-1068,308.86,ACH-7WXE6S
+2026-11-22,JE-10234,Software Subscriptions,QuickBooks Online subscription,-313.73,
+2026-11-22,JE-10235,Software Subscriptions,Zoom subscription,-124.01,POS-D9R7AN
+2026-11-22,JE-10236,Accounts Receivable,Payment received - Juniper Events INV-1109,1971.97,WIRE-SOJUV0
+2026-11-22,JE-10237,Accounts Receivable,Payment received - Harbor Health INV-1111,2245.51,ACH-VBC2VY
+2026-11-22,JE-10238,Accounts Payable,Bill payment - Sysco BILL-619,-1666.93,BILL-619
+2026-11-23,JE-10239,Accounts Payable,Bill payment - Uline BILL-554,-931.58,
+2026-11-23,JE-10240,Accounts Payable,Bill payment - Office Depot BILL-570,-3453.13,BILL-570
+2026-11-23,JE-10241,Software Subscriptions,Google Workspace subscription,-156.25,
+2026-11-23,JE-10242,Accounts Payable,Bill payment - FedEx BILL-572,-2537.31,BILL-572
+2026-11-23,JE-10243,Merchant Settlements,Square settlement,1226.82,STL-6N92XF
+2026-11-23,JE-10244,Accounts Payable,Bill payment - Pacific Gas & Electric BILL-588,-871.41,ACH-31QW6A
+2026-11-23,JE-10245,Merchant Settlements,Square settlement,608.98,
+2026-11-23,JE-10246,Merchant Settlements,Square settlement,458.70,STL-Q9K6RE
+2026-11-23,JE-10247,Software Subscriptions,Canva subscription,-135.00,
+2026-11-23,JE-10248,Merchant Settlements,Square settlement,364.61,
+2026-11-23,JE-10249,Accounts Payable,Bill payment - FedEx BILL-613,-3000.26,ACH-6TWD1X
+2026-11-23,JE-10250,Accounts Receivable,Payment received - Granite Peak Co INV-1126,3579.96,
+2026-11-23,JE-10251,Accounts Receivable,Payment received - Cedar & Pine LLC INV-1139,2590.44,INV-1139
+2026-11-24,JE-10252,Merchant Settlements,Square settlement,1413.13,
+2026-11-24,JE-10253,Accounts Receivable,Payment received - Harbor Health INV-1090,528.24,
+2026-11-24,JE-10254,Accounts Payable,Bill payment - Pacific Gas & Electric BILL-593,-1788.83,BILL-593
+2026-11-24,JE-10255,Merchant Settlements,Square settlement,568.64,
+2026-11-24,JE-10256,Accounts Receivable,Payment received - Granite Peak Co INV-1105,2694.93,
+2026-11-24,JE-10257,Accounts Receivable,Payment received - Delta Logistics INV-1112,2045.69,ACH-E9RIVH
+2026-11-24,JE-10258,Merchant Settlements,Square settlement,323.31,STL-8II7EW
+2026-11-24,JE-10259,Merchant Settlements,Square settlement,829.60,STL-2J51B3
+2026-11-25,JE-10260,Accounts Receivable,Payment received - Acme Corp INV-1066,3760.47,WIRE-KXO9T7
+2026-11-25,JE-10261,Accounts Payable,Bill payment - Sysco BILL-565,-4170.75,ACH-38DALY
+2026-11-25,JE-10262,Accounts Receivable,Payment received - Acme Corp INV-1077,3479.31,INV-1077
+2026-11-25,JE-10263,Accounts Payable,Bill payment - Office Depot BILL-579,-190.30,ACH-EJLA0G
+2026-11-25,JE-10264,Accounts Receivable,Payment received - Harbor Health INV-1094,3865.72,WIRE-8P6BEF
+2026-11-25,JE-10265,Accounts Receivable,Payment received - Ironwood Fitness INV-1098,1320.55,WIRE-T3WVED
+2026-11-25,JE-10266,Accounts Payable,Bill payment - Staples BILL-605,-4120.69,BILL-605
+2026-11-25,JE-10267,Accounts Payable,Bill payment - Office Depot BILL-614,-3102.89,BILL-614
+2026-11-25,JE-10268,Software Subscriptions,Canva subscription,-369.26,
+2026-11-25,JE-10269,Software Subscriptions,Adobe subscription,-245.64,POS-Q9CVAH
+2026-11-25,JE-10270,Merchant Settlements,Square settlement,1193.26,
+2026-11-25,JE-10271,Merchant Settlements,Square settlement,662.28,
+2026-11-25,JE-10272,Accounts Receivable,Payment received - Ironwood Fitness INV-1098,1320.55,WIRE-T3WVED
+2026-11-26,JE-10273,Merchant Settlements,Square settlement,1230.80,STL-7253J2
+2026-11-26,JE-10274,Accounts Receivable,Payment received - Evergreen Dental INV-1078,2012.94,WIRE-T8T63J
+2026-11-26,JE-10275,Accounts Receivable,Payment received - Granite Peak Co INV-1110,3214.25,INV-1110
+2026-11-26,JE-10276,Accounts Payable,Bill payment - Staples BILL-617,-2712.19,ACH-1KJTGQ
+2026-11-26,JE-10277,Accounts Receivable,Payment received - Juniper Events INV-1124,3913.04,WIRE-HHCMKT
+2026-11-26,JE-10278,Merchant Settlements,Square settlement,668.39,
+2026-11-27,JE-10279,Accounts Payable,Check 1104 - Pacific Gas & Electric,-2528.81,CHK-1104
+2026-11-27,JE-10280,Software Subscriptions,Zoom subscription,-150.80,
+2026-11-27,JE-10281,Software Subscriptions,Google Workspace subscription,-347.10,
+2026-11-27,JE-10282,Accounts Receivable,Payment received - Ironwood Fitness INV-1113,2860.18,INV-1113
+2026-11-28,JE-10283,Accounts Payable,Check 1101 - Office Depot,-3716.64,CHK-1101
+2026-11-28,JE-10284,Accounts Payable,Check 1103 - Uline,-1688.78,CHK-1103
+2026-11-28,JE-10285,Accounts Payable,Bill payment - Pacific Gas & Electric BILL-560,-448.21,BILL-560
+2026-11-28,JE-10286,Accounts Payable,Bill payment - Uline BILL-575,-887.97,BILL-575
+2026-11-28,JE-10287,Software Subscriptions,Adobe subscription,-184.27,POS-FXC08D
+2026-11-28,JE-10288,Merchant Settlements,Square settlement,1383.61,STL-DEJNOB
+2026-11-29,JE-10289,Accounts Payable,Check 1106 - Uline,-3428.37,CHK-1106
+2026-11-29,JE-10290,Accounts Receivable,Payment received - Granite Peak Co INV-1069,2891.96,ACH-11DPG8
+2026-11-29,JE-10291,Software Subscriptions,Zoom subscription,-335.15,POS-26YFPM
+2026-11-29,JE-10292,Accounts Receivable,Payment received - Harbor Health INV-1081,2406.53,
+2026-11-29,JE-10293,Merchant Settlements,Square settlement,1633.35,
+2026-11-29,JE-10294,Accounts Receivable,Payment received - Acme Corp INV-1140,1970.99,ACH-N0T6DV
+2026-11-30,JE-10295,Accounts Payable,Check 1102 - Sysco,-3510.48,CHK-1102
+2026-11-30,JE-10296,Accounts Payable,Check 1105 - Sysco,-2774.51,CHK-1105
+2026-11-30,JE-10297,Payroll Expense,Payroll net pay 2026-11-30,-10173.01,PR-J5PHT0
+2026-11-30,JE-10298,Merchant Settlements,Square settlement,248.21,STL-9K9TR7
