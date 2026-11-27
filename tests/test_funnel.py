@@ -130,11 +130,11 @@ def test_unreachable_server_raises_clear_error():
 
 def test_parsers_tolerate_shapes():
     keys = ["A", "B", "none"]
-    assert parse_probabilities({"answers": {"match": {"probabilities": [0.7, 0.2, 0.1]}}}, keys)["A"] == 0.7
+    assert parse_probabilities({"answers": {"match": {"probabilities": [0.7, 0.2, 0.1]}}}, keys)["A"] == pytest.approx(0.7)
     lst = {"answers": {"match": {"probabilities": [{"name": "B", "probability": 0.8},
                                                   {"name": "none", "probability": 0.2}]}}}
     assert parse_probabilities(lst, keys)["B"] == pytest.approx(0.8)
-    assert parse_probabilities({"answers": {"match": {"choice": "B"}}}, keys)["B"] == 1.0
+    assert parse_probabilities({"answers": {"match": {"choice": "B"}}}, keys)["B"] == pytest.approx(1.0)
     assert parse_llm_reply('Sure! {"choice":"b","confidence":"HIGH"}', keys)[:2] == ("B", 0.9)
     assert parse_llm_reply("no json here", keys)[0] == "none"
     assert parse_llm_reply('{"choice":"Z","confidence":"high"}', keys)[0] == "none"
