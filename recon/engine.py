@@ -4,8 +4,9 @@ from __future__ import annotations
 import csv
 import json
 import re
+import time
 from collections import Counter, defaultdict
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import date
 from pathlib import Path
 
@@ -25,24 +26,33 @@ class RunResult:
     suggestions: list[Suggestion]
     exceptions: list[ExceptionItem]
     summary: dict
+    usage: list[dict] = field(default_factory=list)
+    stage_seconds: dict[str, float] = field(default_factory=dict)
+    remaining_after: dict[str, int] = field(default_factory=dict)
 
 
 def run_matching(bank: list[Transaction], ledger: list[Transaction],
-                 cfg: MatchConfig | None = None, period_end: date | None = None) -> RunResult:
+                 cfg: MatchConfig | None = None, period_end: date | None = None,
+                 extra_layers: list | None = None) -> RunResult:
+    """Run the rule layers named in cfg.layers, then any extra stage objects (e.g. model stages)."""
     cfg = cfg or MatchConfig()
     unknown = [name for name in cfg.layers if name not in LAYER_REGISTRY]
     if unknown:
         raise ValueError(f"unknown matching layer(s): {unknown}")
 
     state = MatchState(bank, ledger, cfg)
-    for name in cfg.layers:
-        LAYER_REGISTRY[name]().run(state)
+    stages = [LAYER_REGISTRY[name]() for name in cfg.layers] + list(extra_layers or [])
+    for layer in stages:
+        t0 = time.perf_counter()
+        layer.run(state)
+        state.stage_seconds[layer.name] = round(time.perf_counter() - t0, 4)
+        state.remaining_after[layer.name] = len(state.unmatched)
 
     period_end = period_end or max(t.txn_date for t in state.by_id.values())
     exceptions = classify_exceptions(state, period_end)
     summary = summarize(state, exceptions)
     return RunResult(cfg, state.bank + state.ledger, state.matches, state.suggestions,
-                     exceptions, summary)
+                     exceptions, summary, state.usage, state.stage_seconds, state.remaining_after)
 
 
 # ---------------------------------------------------------------------------

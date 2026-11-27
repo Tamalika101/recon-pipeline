@@ -7,3 +7,5 @@ results/
 cdk.out/
 node_modules/
 .env
+benchmarks/data/
+benchmarks/results/

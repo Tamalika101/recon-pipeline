@@ -1,0 +1,17 @@
+{
+  "name": "rules + decider + LLM",
+  "description": "SIMULATED model stages for testing the pipeline, budgets and reports without any model. Results are not model results.",
+  "rules": {},
+  "stages": [
+    {
+      "kind": "decider", "provider": "simulated", "threshold": 0.9,
+      "simulated_accuracy": 0.90, "simulated_latency_s": 0.12,
+      "price_in_per_mtok": 0.05, "price_out_per_mtok": 0.05
+    },
+    {
+      "kind": "llm", "provider": "simulated", "accept_confidence": ["high"],
+      "simulated_accuracy": 0.95, "simulated_latency_s": 4.0, "max_calls": 2000,
+      "price_in_per_mtok": 0.10, "price_out_per_mtok": 0.40
+    }
+  ]
+}

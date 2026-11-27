@@ -1,0 +1,14 @@
+{
+  "name": "rules + LLM (Claude Haiku, hosted)",
+  "description": "Two-stage with a hosted LLM. Needs ANTHROPIC_API_KEY. Capped at 300 calls per run so a test costs cents.",
+  "rules": {},
+  "stages": [
+    {
+      "kind": "llm", "provider": "anthropic", "model": "claude-haiku-5-5",
+      "accept_confidence": ["high"], "max_candidates": 4,
+      "max_calls": 300, "max_cost_usd": 1.00,
+      "_price_note": "Check current prices at https://docs.claude.com before publishing figures.",
+      "price_in_per_mtok": 0.10, "price_out_per_mtok": 0.50
+    }
+  ]
+}

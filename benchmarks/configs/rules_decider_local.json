@@ -1,0 +1,13 @@
+{
+  "name": "rules + decider (local Strands)",
+  "description": "Two-stage: rules, then the Strands Decider 2B in Ollama.",
+  "rules": {},
+  "stages": [
+    {
+      "kind": "decider", "provider": "ollama", "model": "strands-decider",
+      "threshold": 0.9, "max_candidates": 4,
+      "_price_note": "Assumed hosted price per million tokens; the decider doesn't report tokens, so they are estimated at 4 characters per token.",
+      "price_in_per_mtok": 0.05, "price_out_per_mtok": 0.05
+    }
+  ]
+}

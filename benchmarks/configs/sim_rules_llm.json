@@ -1,0 +1,12 @@
+{
+  "name": "rules + LLM",
+  "description": "SIMULATED LLM stage for testing. Results are not model results.",
+  "rules": {},
+  "stages": [
+    {
+      "kind": "llm", "provider": "simulated", "accept_confidence": ["high"],
+      "simulated_accuracy": 0.95, "simulated_latency_s": 4.0, "max_calls": 2000,
+      "price_in_per_mtok": 0.10, "price_out_per_mtok": 0.40
+    }
+  ]
+}

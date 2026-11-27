@@ -50,6 +50,16 @@ DEFAULT_RATES = {
     "bank_trace_ref": 0.30,      # non-shared bank lines with a bank-internal trace ID (matches nothing)
 }
 
+# Difficulty profiles: rate overrides on top of DEFAULT_RATES (--rate still wins).
+PROFILES = {
+    "easy": {"shared_id": 0.60, "garbled": 0.03, "transposed": 0.01, "twins": 0.005,
+             "lump_deposit": 0.01, "duplicate": 0.005, "missing_ledger_ref": 0.05},
+    "realistic": {},
+    "hard": {"shared_id": 0.20, "garbled": 0.20, "transposed": 0.03, "twins": 0.05,
+             "lump_deposit": 0.04, "duplicate": 0.02, "outstanding": 0.03, "bank_fee": 0.02,
+             "unknown_charge": 0.01, "missing_ledger_ref": 0.40},
+}
+
 DATE_WINDOW_DAYS = 5    # exact layer's default window; garbled lines post beyond it
 FUZZY_WINDOW_DAYS = 10  # fuzzy layer searches wider, so it can still reach them
 
@@ -550,11 +560,13 @@ def main() -> None:
     ap.add_argument("--period", default="2026-11", help="YYYY-MM")
     ap.add_argument("--events", type=int, default=300, help="approximate true events")
     ap.add_argument("--out", default="data")
+    ap.add_argument("--profile", choices=sorted(PROFILES), default="realistic",
+                    help="difficulty mix: easy, realistic (default) or hard")
     ap.add_argument("--rate", action="append", default=[], metavar="NAME=VALUE",
                     help=f"override a rate; names: {', '.join(DEFAULT_RATES)}")
     args = ap.parse_args()
 
-    rates = dict(DEFAULT_RATES)
+    rates = {**DEFAULT_RATES, **PROFILES[args.profile]}
     for item in args.rate:
         k, v = item.split("=", 1)
         if k not in rates:
@@ -576,6 +588,7 @@ def main() -> None:
 
     meta = {
         "seed": args.seed,
+        "profile": args.profile,
         "period": {"start": w.start.isoformat(), "end": w.end.isoformat()},
         "events_requested": args.events,
         "rows": {"bank": len(w.bank), "ledger": len(w.ledger), "truth": len(w.truth)},

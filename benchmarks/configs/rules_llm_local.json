@@ -1,0 +1,15 @@
+{
+  "name": "rules + LLM (local Qwen)",
+  "description": "Two-stage: rules, then a local Qwen chat model in Ollama for the leftovers.",
+  "rules": {},
+  "stages": [
+    {
+      "kind": "llm", "provider": "ollama", "model": "qwen3.5:9b",
+      "accept_confidence": ["high"], "max_candidates": 4,
+      "max_calls": 2000,
+      "_price_note": "Runs locally for free. Prices are what a hosted Qwen of this size would cost; replace with your provider's rates.",
+      "price_in_per_mtok": 0.10, "price_out_per_mtok": 0.40,
+      "timeout_s": 300
+    }
+  ]
+}

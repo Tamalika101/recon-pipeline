@@ -95,12 +95,21 @@ Then put `"my_layer"` in `MatchConfig.layers` where it should run.
 app.py        Streamlit app
 recon/        engine: models, normalize, text, layers, engine, evaluate, CLI,
               plus autodetect (column guessing), review (decisions), report,
-              explain (the plain-language pipeline shown in 'How it works')
+              explain (the plain-language pipeline shown in 'How it works'),
+              ai + model_stages + funnel (optional decision-model and LLM stages)
+benchmarks/   benchmark runner, example configs and guide
 synth/        synthetic data generator and an independent dataset checker
 data/         sample dataset (seed 42) used by "Try it with sample data"
 mappings/     column mappings for the generator's bank and ledger formats
 tests/        unit tests per layer, review/report tests, end-to-end app test
 ```
+
+## Benchmarking model stages
+
+The engine can add a decision model (Strands Decider) and an LLM (a local Qwen via Ollama, or
+Claude) after the rules, driven by JSON configs, and benchmark configurations on synthetic data
+for accuracy, cost, latency and manual effort. See [benchmarks/README.md](benchmarks/README.md).
+The web app itself still uses rules only.
 
 ## Contributing
 

@@ -1,0 +1,5 @@
+{
+  "name": "rules only",
+  "description": "Baseline: the four rule layers, no models.",
+  "rules": {}
+}

@@ -83,6 +83,11 @@ def evaluate(result: RunResult, truth_path: str | Path) -> dict:
             "precision": round(correct_pred / len(pred_pairs), 4) if pred_pairs else 1.0,
             "recall": round(len(pred_pairs & true_pairs_auto) / len(true_pairs_auto), 4)
             if true_pairs_auto else 1.0,
+            # Share of ALL real matches made automatically, including look-alike pairs that no rule
+            # can separate. Rules alone can't reach 100% here; model stages may.
+            "recall_all": round(len(pred_pairs & true_pairs_all) / len(true_pairs_all), 4)
+            if true_pairs_all else 1.0,
+            "wrong": len(pred_pairs - true_pairs_all),
             "wrong_pairs": sorted(pred_pairs - true_pairs_all)[:10],
         },
         "exception_bucket_accuracy": round(

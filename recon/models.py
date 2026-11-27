@@ -94,6 +94,7 @@ class MatchConfig:
     max_group_size: int = 5
     combo_window_days: int = 7
     combo_pool_size: int = 25
+    combo_max_coincidence: float = 0.01  # auto-match a group only if a chance match is this unlikely
     timing_days: int = 5             # ledger items this close to period end look like timing
     weights: dict = field(default_factory=lambda: {"amount": 0.5, "date": 0.2, "description": 0.3})
     layers: list = field(default_factory=lambda: [LAYER_REFERENCE, LAYER_EXACT,

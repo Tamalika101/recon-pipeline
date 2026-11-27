@@ -10,6 +10,7 @@ To add a layer (the future plugin slot), subclass Layer, give it a unique
 from __future__ import annotations
 
 from collections import defaultdict
+from math import comb
 from typing import Iterable
 
 from .models import (LAYER_COMBINATION, LAYER_EXACT, LAYER_FUZZY, LAYER_REFERENCE,
@@ -42,6 +43,9 @@ class MatchState:
         self.suggestions: list[Suggestion] = []
         self.ambiguous: set[str] = set()
         self._suggested_pairs: set[tuple] = set()
+        self.usage: list[dict] = []                 # one entry per model call (tokens, latency, cost)
+        self.stage_seconds: dict[str, float] = {}   # wall time per stage
+        self.remaining_after: dict[str, int] = {}   # unmatched lines left after each stage
 
     def open_bank(self) -> list[Transaction]:
         return [t for t in self.bank if t.id in self.unmatched]
@@ -365,21 +369,38 @@ class CombinationLayer(Layer):
                 out.append((days, t))
         return out
 
+    @staticmethod
+    def coincidence(pool: list[Transaction], max_size: int, tol: int) -> float:
+        """Rough chance that *some* group from this pool hits a given total by accident.
+
+        (number of groups of 2..max_size) x (2*tol+1) / (spread of possible totals, in cents).
+        With few candidates this is tiny; when a busy month puts hundreds of open lines in
+        a few days, it grows quickly, and a "unique" group stops being convincing.
+        """
+        n = len(pool)
+        groups = sum(comb(n, k) for k in range(2, min(max_size, n) + 1))
+        biggest = sorted((abs(t.amount_cents) for t in pool), reverse=True)[:max_size]
+        spread = max(1, sum(biggest))
+        return min(1.0, groups * (2 * tol + 1) / spread)
+
     def _solutions(self, one: Transaction, cands: list[tuple[int, Transaction]],
-                   cfg: MatchConfig) -> list[list[Transaction]]:
+                   cfg: MatchConfig) -> tuple[list[list[Transaction]], float]:
         distinct: dict[frozenset, list[Transaction]] = {}
+        worst = 0.0
         lo = -cfg.bank_lead_days
         for start in range(lo, cfg.combo_window_days - self.BAND_DAYS + 2):
             band = [t for d, t in cands if start <= d < start + self.BAND_DAYS]
             band = band[: cfg.combo_pool_size]
             if len(band) < 2:
                 continue
-            for sol in find_subsets(one.amount_cents, band, cfg.max_group_size,
-                                    cfg.amount_tolerance_cents):
+            found = find_subsets(one.amount_cents, band, cfg.max_group_size, cfg.amount_tolerance_cents)
+            if found:
+                worst = max(worst, self.coincidence(band, cfg.max_group_size, cfg.amount_tolerance_cents))
+            for sol in found:
                 distinct.setdefault(frozenset(t.id for t in sol), sol)
             if len(distinct) >= 3:
                 break
-        return list(distinct.values())
+        return list(distinct.values()), worst
 
     def _pass(self, ones: list[Transaction], many: list[Transaction], one_is_bank: bool,
               state: MatchState) -> None:
@@ -390,10 +411,18 @@ class CombinationLayer(Layer):
             cands = self._candidates(one, many, one_is_bank, state)
             if len(cands) < 2:
                 continue
-            sols = self._solutions(one, cands, cfg)
+            sols, chance = self._solutions(one, cands, cfg)
             if not sols:
                 continue
             side = "ledger" if one_is_bank else "bank"
+            if len(sols) == 1 and chance > cfg.combo_max_coincidence:
+                group = sorted(sols[0], key=lambda t: t.source_row)
+                bank, ledger = ([one], group) if one_is_bank else (group, [one])
+                state.suggest(bank, ledger, self.name, 55,
+                              f"{len(group)} {side} lines sum exactly to {one.amount:.2f}, but with "
+                              f"this many open lines a chance match is about {chance:.0%} likely")
+                state.ambiguous.add(one.id)
+                continue
             if len(sols) == 1:
                 group = sorted(sols[0], key=lambda t: t.source_row)
                 bank, ledger = ([one], group) if one_is_bank else (group, [one])

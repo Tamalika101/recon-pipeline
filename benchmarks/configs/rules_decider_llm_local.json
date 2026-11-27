@@ -1,0 +1,17 @@
+{
+  "name": "rules + decider + LLM (local)",
+  "description": "Three-stage funnel: rules, then the Strands Decider 2B, then a local Qwen for what the decider isn't sure about.",
+  "rules": {},
+  "stages": [
+    {
+      "kind": "decider", "provider": "ollama", "model": "strands-decider",
+      "threshold": 0.9, "max_candidates": 4,
+      "price_in_per_mtok": 0.05, "price_out_per_mtok": 0.05
+    },
+    {
+      "kind": "llm", "provider": "ollama", "model": "qwen3.5:9b",
+      "accept_confidence": ["high"], "max_candidates": 4, "max_calls": 2000,
+      "price_in_per_mtok": 0.10, "price_out_per_mtok": 0.40, "timeout_s": 300
+    }
+  ]
+}
