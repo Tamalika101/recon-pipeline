@@ -113,8 +113,9 @@ Keys starting with `_` are comments.
 **About cost figures for local runs.** Local models cost nothing per token. The configured
 prices let the report show what the same run would cost on a hosted model, which is the
 production question. Replace them with your provider's current rates before publishing.
-The Strands Decider doesn't report token counts, so its tokens are estimated at about 4
-characters per token (flagged as `decider_tokens_estimated` in `results.csv`).
+Ollama reports the Strands Decider's input tokens, so its cost uses real counts; if a
+server doesn't report them, tokens are estimated at about 4 characters per token (flagged
+as `decider_tokens_estimated` in `results.csv`).
 
 **Simulated configs** (`sim_*.json`) answer from the ground truth at a set accuracy, to test
 the pipeline, budgets and reports without any model. They're marked *sim* in the summary.

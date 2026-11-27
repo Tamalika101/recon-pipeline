@@ -4,7 +4,9 @@ Every provider answers one DecisionItem: a bank line plus a few candidate book
 entries, labelled A, B, C... and "none". Providers return which option they pick,
 how sure they are, and a Usage record (tokens and latency) so cost can be priced.
 
-    OllamaDecider   Strands Decider via Ollama's /v1/systemone endpoint (local)
+    OllamaDecider   Strands Decider via Ollama's /v1/systemone endpoint (local); response:
+                    {"answers": {"match": {"choice", "probabilities": {key: p}, "confidence"}},
+                     "usage": {"input_tokens", "output_tokens"}}
     OllamaChat      any chat model in Ollama, e.g. a local Qwen (local)
     AnthropicChat   Claude via the Anthropic Messages API (hosted, needs ANTHROPIC_API_KEY)
     Simulated*      answer from the ground truth at a set accuracy, ONLY for testing the
@@ -98,10 +100,15 @@ class OllamaDecider:
         latency = time.perf_counter() - t0
         probs = parse_probabilities(resp, list(item.options))
         choice = max(probs, key=probs.get)
-        prompt = item.state + item.instructions + json.dumps(item.options)
+        # Ollama reports {"usage": {"input_tokens": N, "output_tokens": 0}}; estimate only if missing.
+        u = resp.get("usage") or {}
+        if isinstance(u.get("input_tokens"), int):
+            usage = Usage(u["input_tokens"], int(u.get("output_tokens") or 0), latency)
+        else:
+            prompt = item.state + item.instructions + json.dumps(item.options)
+            usage = Usage(estimate_tokens(prompt), 1, latency, estimated_tokens=True)
         return Decision(choice, probs[choice], f"decision model probability {probs[choice]:.0%}",
-                        Usage(estimate_tokens(prompt), 1, latency, estimated_tokens=True),
-                        raw=json.dumps(resp)[:500])
+                        usage, raw=json.dumps(resp)[:500])
 
 
 def parse_probabilities(resp: dict, keys: list[str]) -> dict[str, float]:

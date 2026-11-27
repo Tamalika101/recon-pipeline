@@ -36,7 +36,11 @@ class FakeHandler(BaseHTTPRequestHandler):
         if self.path == "/v1/systemone":
             keys = list(body["questions"]["match"]["criteria"])
             probs = {k: (0.93 if k == "A" else 0.07 / (len(keys) - 1)) for k in keys}
-            out = {"answers": {"match": {"choice": "A", "probabilities": probs}}}
+            # Shape observed from Ollama 0.40.19 with strands-decider
+            out = {"model": "strands-decider",
+                   "answers": {"match": {"type": "choice", "choice": "A", "probabilities": probs,
+                                         "confidence": 0.86}},
+                   "usage": {"input_tokens": 233, "output_tokens": 0}, "prompt_eval_cached_count": 0}
         elif self.path == "/api/chat":
             out = {"message": {"role": "assistant",
                                "content": '{"choice": "A", "confidence": "high", "reason": "same vendor"}'},
@@ -101,7 +105,7 @@ def test_ollama_decider_request_and_response(fake_server):
     q = body["questions"]["match"]
     assert q["type"] == "choice" and set(q["criteria"]) == {"A", "B", "none"}
     assert d.choice == "A" and d.confidence == pytest.approx(0.93)
-    assert d.usage.estimated_tokens and d.usage.input_tokens > 0
+    assert (d.usage.input_tokens, d.usage.output_tokens, d.usage.estimated_tokens) == (233, 0, False)
 
 
 def test_ollama_chat_uses_json_mode_and_reports_tokens(fake_server):
